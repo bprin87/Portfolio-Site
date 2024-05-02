@@ -6,21 +6,38 @@
 }
 
 body {
-    background-color: #fff;
-    color: #FF5A5F;
+    background-color: #071C34;
+}
+
+body, a, a:link, a:visited, .social-media a, .social-media li a:hover, #skills li {
+    color: #E7E7F8;
+}
+
+
+p, li {
+    font-size: .875rem;
 }
 
 li {
     list-style: none;
 }
 
-header, main {
-    margin: 20px;
+a, a:link, a:visited {
+    text-decoration: none;
 }
 
-.nav-container h1 {
+header {
+    margin: 30px 30px 0;
+}
+
+main {
+    margin: 0 30px;
+    padding-top: .5rem;
+}
+
+.nav-container h1, .nav-container h2 {
     font-size: 2.25rem;
-    margin: 10px 0 5px 
+    margin: 10px 0 5px;
 }
 
 .nav-container h2 {
@@ -28,6 +45,7 @@ header, main {
     font-weight: 500;
     margin-bottom: 20px;
 }
+
 
 nav {
     display: none;
@@ -39,25 +57,24 @@ nav {
 }    
 
 .social-media a {
-    text-decoration: none;
-    color: #FF5A5F;
     padding-right: 15px;
     cursor: pointer;
 }
 
-.social-media li a:hover {
-    color: #FF385C;
+.social-media svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 10px;
 }
 
-svg {
-    height: 1.4rem;
-    width: 1.4rem;
+.social-media svg:hover {
+    color: #fff;
 }
 
 main h2 {
     text-transform: uppercase;
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 2px;
     margin: 60px 0 20px;
 }
@@ -68,30 +85,168 @@ main p {
 }
 
 #skills ul {
-    margin-top: 20px;
+    margin: 35px auto 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 150px);
+    grid-template-columns: repeat(5, auto);
     justify-content: center;
+    gap: 20px;
+    max-width: 800px;
 }
 
 #skills li {
-   font-weight: 500;
+   font-weight: 600;
    line-height: 30px;
+   text-align: center;
+   margin: 10px;
 }
 
+#skills svg {
+    fill: #E7E7F8;
+    height: 2rem;
+    width: 2rem;
+    margin: 10px;
+}
+
+#projects {
+    margin-bottom: 60px;
+}
+
+#projects li {
+    margin-bottom: 30px;
+}
+
+
+#projects h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer; 
+    display: inline-block;  
+}
+
+#projects a:hover, #projects a:hover svg  {
+    color: #5EEAD4;
+}
+
+#projects a:hover svg {
+    transform: translateY(-3px) translateX(3px);
+    font-weight: 700;
+}
+
+#projects p {
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+#projects svg {
+    height: .8rem;
+    width: .8rem;
+}
+
+.project-skills {
+    display: flex;
+    margin-top: 15px;
+}
+
+.project-skills li {
+    margin-right: 10px;
+    border: 1px solid #5EEAD4;
+    border-radius: 10px;
+    padding: 5px 8px;
+    color: #5EEAD4;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 1rem;
+}
 
 @media only screen and (min-width: 1024px) {
 
-.nav-container h1 {
-    font-size: 3rem;
-}
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        max-width: 1200px;
+        padding-left: 6rem;
+        padding-right: 6rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-nav {
-    display: block;
-}
+    header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        padding: 6rem 0;
+        display: flex;
+        max-height: 100vh;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 0;
+    }
 
-#about h2, #skills h2, #projects h2 {
-    display: none;
-}
-    
+    main {
+        padding: 6rem 0;
+        margin: 0;
+    }
+
+    .nav-container {
+        margin-bottom: auto;
+    }
+
+    .nav-container h1 {
+        font-size: 3rem;
+    }
+
+    nav {
+        display: block;
+        margin-top: 50px;
+    }
+
+    nav li {
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 45px;
+    }
+
+    nav a:hover, .active {
+        margin-left: 40px;
+        font-weight: 800;
+        color: #fff;
+    }
+
+    .bi-arrow-right:hover {
+        width: 5rem;
+    }
+
+    #about, #skills, #projects {
+        margin-bottom: 9rem;
+    }
+
+    #about h2, #skills h2, #projects h2 {
+        display: none;
+    }
+
+    .social-media {
+        width: 100%;
+        display: flex;
+    }
+
+    #projects {
+        margin-bottom: 300px;
+    }
+
+    footer {
+        grid-column: 2;
+        width: 100%;
+        padding-bottom: 9rem;
+        margin-top: -.7rem;
+        display: flex;
+        text-align: left;
+    }
+
+    footer p {
+        line-height: 1.2rem;
+    }
+
 }
