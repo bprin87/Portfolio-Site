@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "bootstrap-icons": "^1.11.3"
+    "aos": "^2.3.4",
+    "bootstrap-icons": "^1.11.3",
+    "font-awesome": "^4.7.0"
   }
 }
