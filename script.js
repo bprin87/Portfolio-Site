@@ -60,12 +60,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
     // Animation On Scroll library to display skills
-    AOS.init({
-        offset: 400, // Change offset to trigger animations sooner or later (px)
-        duration: 600, // Duration of animation (ms)
-        easing: 'ease-in-out', // Easing type
-        delay: 100, // Delay between animations (ms)
-    });
+    // Check if the screen size is less than 1024px
+    if (window.innerWidth < 1024) {
+        // If the screen size is small, initialize AOS with a negative offset to trigger animations immediately
+        AOS.init({
+            offset: -600, // Change offset to trigger animations sooner or later (px)
+            duration: 600, // Duration of animation (ms)
+            easing: 'ease-in-out', // Easing type
+            delay: 100, // Delay between animations (ms)
+        });
+    } else {
+        // If the screen size is larger than or equal to 1024px, initialize AOS with a positive offset to wait for scrolling
+        AOS.init({
+            offset: 600, 
+            duration: 600,
+            easing: 'ease-in-out',
+            delay: 100, 
+        });
+}
+
+  
 
 });
 
