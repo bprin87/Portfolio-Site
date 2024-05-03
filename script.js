@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Animation On Scroll library to display skills
     // Check if the screen size is less than 1024px
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth < 1024 && window.innerHeight > 436) {
         // If the screen size is small, initialize AOS with a negative offset to trigger animations immediately
         AOS.init({
             offset: -600, // Change offset to trigger animations sooner or later (px)
