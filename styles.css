@@ -34,6 +34,8 @@ main {
     padding-top: .5rem;
 }
 
+/* navigation */
+
 .nav-container h1, .nav-container h2 {
     font-size: 2.25rem;
     margin: 10px 0 5px;
@@ -82,11 +84,13 @@ main p {
     margin-top: 20px;
 }
 
+/* skills */
+
 #skills ul {
     margin-top: 35px;
     display: grid;
-    grid-template-columns: repeat(5, auto);
-    max-width: 500px;
+    grid-template-columns: repeat(3, auto);
+    max-width: 800px;  
 }
 
 #skills li {
@@ -94,6 +98,9 @@ main p {
    line-height: 30px;
    text-align: center;
    margin: 10px;
+   display: flex; 
+   flex-direction: column; 
+   align-items: center;
 }
 
 #skills svg {
@@ -102,6 +109,8 @@ main p {
     width: 2rem;
     margin: 10px;
 }
+
+/* projects */
 
 #projects {
     margin-bottom: 60px;
@@ -154,8 +163,10 @@ main p {
 footer {
     text-align: center;
     padding-bottom: 1rem;
+    line-height: 20px;
 }
 
+/* larger screen sizes */
 @media only screen and (min-width: 1024px) {
 
     body {
@@ -228,6 +239,10 @@ footer {
         display: flex;
     }
 
+    #skills ul {
+        grid-template-columns: repeat(5, auto);
+    }
+
     #projects {
         margin-bottom: 300px;
     }
@@ -246,3 +261,4 @@ footer {
     }
 
 }
+
