@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         // If the screen size is larger than or equal to 1024px, initialize AOS with a positive offset to wait for scrolling
         AOS.init({
-            offset: 600, 
+            offset: 500, 
             duration: 600,
             easing: 'ease-in-out',
             delay: 100, 
